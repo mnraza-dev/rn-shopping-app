@@ -27,26 +27,35 @@ export const ListHeader = () => {
             <Text style={styles.avatarText}>Hello MN Raza</Text>
           </View>
         </View>
-        <Link href='/cart' asChild>
-          <Pressable>
-            {({ pressed }) => (
-              <View>
-                <FontAwesome
-                  name='shopping-cart'
-                  size={25}
-                  color='gray'
-                  style={{
-                    marginRight: 15,
-                    opacity: pressed ? 0.5 : 1
-                  }}
-                />
-                <View style={styles.badgeContainer}>
-                  <Text style={styles.badgeText}>{1}</Text>
+        <View style={styles.headerRight}>
+          <Link style={styles.cartContainer} href='/cart' asChild>
+            <Pressable>
+              {({ pressed }) => (
+                <View>
+                  <FontAwesome
+                    name='shopping-cart'
+                    size={25}
+                    color='gray'
+                    style={{
+                      marginRight: 15,
+                      opacity: pressed ? 0.5 : 1
+                    }}
+                  />
+                  <View style={styles.badgeContainer}>
+                    <Text style={styles.badgeText}>{1}</Text>
+                  </View>
                 </View>
-              </View>
-            )}
-          </Pressable>
-        </Link>
+              )}
+            </Pressable>
+          </Link>
+          <TouchableOpacity
+            // onPress={handleSignOut}
+            style={styles.signOutButton}
+
+          >
+            <FontAwesome name='sign-out' size={25} color='red' />
+          </TouchableOpacity>
+        </View>
 
       </View>
       <View style={styles.heroContainer}>
