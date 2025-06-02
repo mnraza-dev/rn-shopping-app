@@ -10,12 +10,12 @@ import {
 } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { CATEGORIES } from '../assets/categories';
-// import { useCartStore } from '../store/cart-store';
+import { useCartStore } from '../store/cart-store';
 // import { supabase } from '../lib/supabase';
 // import { Tables } from '../types/database.types';
 
 export const ListHeader = () => {
-
+  const { getItemCount } = useCartStore();
   return (
     <View style={[styles.headerContainer]}>
       <View style={styles.headerTop}>
@@ -43,7 +43,7 @@ export const ListHeader = () => {
                     }}
                   />
                   <View style={styles.badgeContainer}>
-                    <Text style={styles.badgeText}>{1}</Text>
+                    <Text style={styles.badgeText}>{getItemCount()}</Text>
                   </View>
                 </View>
               )}
@@ -74,7 +74,7 @@ export const ListHeader = () => {
               <Pressable style={styles.category}>
                 <Image
                   source={{ uri: item.imageUrl }}
-                  style={styles.categoryImage} 
+                  style={styles.categoryImage}
                 />
                 <Text style={styles.categoryText}>{item.name}</Text>
               </Pressable>
