@@ -1,15 +1,16 @@
 import { Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import {  Stack } from 'expo-router'
+import { router, Stack, useRouter } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 
 export default function CategoryLayout() {
+    const router = useRouter()
     return (
         <Stack>
             <Stack.Screen name='[slug]' options={{
                 headerShown: true,
                 headerLeft: () => (
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => router.back()}>
                         <Ionicons name='arrow-back' size={24} color='black' />
                     </TouchableOpacity>
                 )
