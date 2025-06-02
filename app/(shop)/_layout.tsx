@@ -34,7 +34,12 @@ const TabsLayout = () => {
                         }
                     }}
                 />
-                <Tabs.Screen name='orders' options={{}} />
+                <Tabs.Screen name='orders' options={{
+                    title: 'Orders',
+                    tabBarIcon(props) {
+                        return <TabBarIcon {...props} name='book' />;
+                    }
+                }} />
             </Tabs>
         </SafeAreaView>)
 }
