@@ -18,6 +18,15 @@ export const ListHeader = () => {
   return (
     <View style={[styles.headerContainer]}>
       <View style={styles.headerTop}>
+        <View style={styles.headerLeft}>
+          <View style={styles.avatarContainer}>
+            <Image
+              source={{ uri: 'https://via.placeholder.com/40' }}
+              style={styles.avatarImage}
+            />
+            <Text style={styles.avatarText}>Hello MN Raza</Text>
+          </View>
+        </View>
 
       </View>
       <View style={styles.heroContainer}>
@@ -62,6 +71,7 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 20,
     marginRight: 10,
+    backgroundColor: 'green',
   },
   avatarText: {
     fontSize: 16,
