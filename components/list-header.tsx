@@ -74,7 +74,7 @@ export const ListHeader = () => {
               <Pressable style={styles.category}>
                 <Image
                   source={{ uri: item.imageUrl }}
-                  style={styles.categoryImage}
+                  style={styles.categoryImage} 
                 />
                 <Text style={styles.categoryText}>{item.name}</Text>
               </Pressable>
