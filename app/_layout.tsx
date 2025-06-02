@@ -7,11 +7,11 @@ export default function RootLayout() {
                 headerShown: false, title: 'Shop'
             }} />
             <Stack.Screen name='categories' options={{
-                headerShown: true, title: 'Categories'
+                headerShown: false, title: 'Categories'
             }} />
 
             <Stack.Screen name='product' options={{
-                headerShown: true, title: 'Product'
+                headerShown: false, title: 'Product'
             }} />
             <Stack.Screen name='cart' options={{
                 presentation: 'modal', title: 'Shopping Cart'
