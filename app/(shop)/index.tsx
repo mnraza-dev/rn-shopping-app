@@ -1,6 +1,8 @@
 import React from 'react'
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import { PRODUCTS } from '../../assets/products'
+import { ProductListItem } from '../../components/product-list-item';
+
 
 export default function Home() {
     return (
@@ -8,9 +10,7 @@ export default function Home() {
             <FlatList
                 data={PRODUCTS}
                 renderItem={({ item }) =>
-                    <View>
-                        <Text>{item.title}</Text>
-                    </View>
+                    <ProductListItem product={item} />
                 }
                 keyExtractor={item => item.id.toString()}
                 numColumns={2} ListHeaderComponent={() => <Text>Products</Text>}
