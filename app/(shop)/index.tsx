@@ -2,6 +2,7 @@ import React from 'react'
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import { PRODUCTS } from '../../assets/products'
 import { ProductListItem } from '../../components/product-list-item';
+import { ListHeader } from '../../components/list-header';
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
                     <ProductListItem product={item} />
                 }
                 keyExtractor={item => item.id.toString()}
-                numColumns={2} ListHeaderComponent={() => <Text>Products</Text>}
+                numColumns={2} ListHeaderComponent={() => <ListHeader />}
                 contentContainerStyle={styles.flatListContent}
                 columnWrapperStyle={styles.flatListColumnWrapper}
                 style={{
