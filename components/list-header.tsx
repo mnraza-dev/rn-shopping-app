@@ -27,6 +27,26 @@ export const ListHeader = () => {
             <Text style={styles.avatarText}>Hello MN Raza</Text>
           </View>
         </View>
+        <Link href='/cart' asChild>
+          <Pressable>
+            {({ pressed }) => (
+              <View>
+                <FontAwesome
+                  name='shopping-cart'
+                  size={25}
+                  color='gray'
+                  style={{
+                    marginRight: 15,
+                    opacity: pressed ? 0.5 : 1
+                  }}
+                />
+                <View style={styles.badgeContainer}>
+                  <Text style={styles.badgeText}>{1}</Text>
+                </View>
+              </View>
+            )}
+          </Pressable>
+        </Link>
 
       </View>
       <View style={styles.heroContainer}>
