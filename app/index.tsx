@@ -1,13 +1,11 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-function Index() {
+export default function Home() {
     return (
         <View>
-            <Text>Lorem ipsum  quos.
-            </Text>
+            <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</Text>
+
         </View>
     )
 }
-
-export default Index
